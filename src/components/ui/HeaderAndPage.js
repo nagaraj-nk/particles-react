@@ -7,7 +7,7 @@ export function NavHeader() {
       {(
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <small>Easy Shopping</small>
             </a>
             <button
@@ -26,9 +26,14 @@ export function NavHeader() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
+              <li className="nav-item">
                   <Link className="nav-link" to={"admin"}>
                     Admin
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={"products"}>
+                    Products
                   </Link>
                 </li>
               </ul>

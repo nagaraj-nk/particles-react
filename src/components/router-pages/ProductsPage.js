@@ -1,6 +1,5 @@
-import './Products.css'
 import { React, useEffect, useState } from "react";
-import { json } from "react-router-dom";
+import './Products.css';
 
 export function ProductsPage() {
   const [products, setProducts] = useState([]);
