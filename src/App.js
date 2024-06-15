@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="continer-fluid">
       <ParticlesBackground />
+      <HomePage/>
     </div>
   );
 }

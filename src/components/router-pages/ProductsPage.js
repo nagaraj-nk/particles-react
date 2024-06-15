@@ -1,9 +1,9 @@
 import { React } from "react";
 
-export function AnotherBlogPage() {
+export function ProductsPage() {
   return (
     <div>
-      <p>Another Blogs Page</p>
+      <p>ProductsPage</p>
     </div>
   );
 }
