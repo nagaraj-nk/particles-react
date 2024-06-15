@@ -48,19 +48,6 @@ export function NavHeader() {
                       Fetch API
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      className="dropdown-item"
-                      to={"test/fetchapiquery?id=1"}
-                    >
-                      Fetch API Query
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={"test/masterdetail/1"}>
-                      Master Detail Page
-                    </Link>
-                  </li>
                 </ul>
               </li>
             </ul>

@@ -6,7 +6,6 @@ import { BlogsIndexPage } from "./BlogsIndexPage";
 import { AnotherBlogPage } from "./AnotherBlogPage";
 import { FetchAPIPage } from "./FetchAPIPage";
 import { FetchAPIPageQueryParam } from "./FetchAPIPageQueryParam";
-import { MasterDetailPage } from "./MasterDetailPage";
 export function HomePage() {
   return (
     <div>
@@ -20,7 +19,6 @@ export function HomePage() {
             path="/test/fetchapiquery"
             element={<FetchAPIPageQueryParam />}
           />
-          <Route path="/test/masterdetail/:id" element={<MasterDetailPage />} />
         </Route>
       </Routes>
     </div>
