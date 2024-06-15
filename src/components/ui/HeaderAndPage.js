@@ -1,14 +1,14 @@
 import { React } from "react";
 import { Link, Outlet } from "react-router-dom";
 
-export function NavHeader(props) {
+export function NavHeader() {
   return (
     <div>
-      {props.showNavHeader == true && (
+      {(
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              <small>Blogs</small>
+              <small>Easy Shopping</small>
             </a>
             <button
               className="navbar-toggler"
@@ -27,42 +27,19 @@ export function NavHeader(props) {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link" to={"sampleblog"}>
-                    Home
+                  <Link className="nav-link" to={"admin"}>
+                    Admin
                   </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={"anotherblog"}>
-                    Another Blog
-                  </Link>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Test
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link className="dropdown-item" to={"test/fetchapi/1"}>
-                        Fetch API
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
               </ul>
-              <form className="d-flex" role="search">
+              {/* <form className="d-flex" role="search">
                 <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                 />
-              </form>
+              </form> */}
             </div>
           </div>
         </nav>

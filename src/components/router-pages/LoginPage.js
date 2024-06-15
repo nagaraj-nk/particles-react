@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import ParticlesBackground from "../../ParticlesBackground";
 
 export function LoginPage(props) {
-  useEffect(() => {
-    props.updateNavHeader(false);
-  }, []);
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -12,10 +12,12 @@ export function LoginPage(props) {
     // Handle login logic here
     console.log('Username:', username);
     console.log('Password:', password);
+    navigate("/products");
   };
 
   return (
     <div className="login-container">
+      <ParticlesBackground />
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Login</h2>
         <div className="form-group">

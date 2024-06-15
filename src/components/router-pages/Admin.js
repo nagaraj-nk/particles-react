@@ -1,9 +1,9 @@
 import { React } from "react";
 
-export function FullBlogPage() {
+export function AdminPage() {
   return (
     <div>
-      <p>Full Blogs Page</p>
+      <p>AdminPage</p>
     </div>
   );
 }

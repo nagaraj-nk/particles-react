@@ -1,34 +1,19 @@
 import { React, useState } from "react";
-import { FullBlogPage } from "./FullBlogPage";
 import { Route, Routes } from "react-router-dom";
 import { NavHeader } from "../ui/HeaderAndPage";
 import { BlogsIndexPage, LoginPage } from "./LoginPage";
 import { AnotherBlogPage, ProductsPage } from "./ProductsPage";
 import { FetchAPIPage } from "./FetchAPIPage";
-import { FetchAPIPageQueryParam } from "./FetchAPIPageQueryParam";
+import { AdminPage } from "./Admin";
 export function HomePage() {
-  const [showNavHeader, setShowNavHeader] = useState(false);
-  const updateNavHeader = (flag) => {
-    setShowNavHeader(flag);
-  };
-
   return (
     <div>
       <Routes>
-        <Route path="/" element={<NavHeader showNavHeader={showNavHeader} />}>
-          <Route
-            index
-            element={<LoginPage updateNavHeader={updateNavHeader} />}
-          />
-          <Route
-            path="/products"
-            element={<ProductsPage updateNavHeader={updateNavHeader} />}
-          />
+        <Route path="/" element={<NavHeader />}>
+          <Route index element={<LoginPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="/test/fetchapi/:id" element={<FetchAPIPage />} />
-          <Route
-            path="/test/fetchapiquery"
-            element={<FetchAPIPageQueryParam />}
-          />
         </Route>
       </Routes>
     </div>
